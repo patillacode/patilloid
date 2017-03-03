@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='patilloid',
-    version='0.0.5',
+    version='0.0.6',
     description='',
     license='GPLv2',
     packages=find_packages(),
