@@ -28,8 +28,18 @@ Arkanoid-like game / My first javascript code
 ------------
 
 ### Usage
-* Run `python application.py`
-* go to `localhost:8080/` in your browser
+* Run `python patilloid_server.py`
+* go to `localhost:5050/` in your browser
+
+------------
+
+#### Take a look at this screenshots:
+
+![Screenshot](/screenshots/start.png?raw=true "Start")
+
+![Screenshot](/screenshots/in_game.png?raw=true "In game")
+
+![Screenshot](/screenshots/game_over.png?raw=true "Game Over")
 
 ------------
 
