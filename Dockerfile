@@ -9,5 +9,5 @@ WORKDIR patilloid
 
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-CMD ["waitress-serve", "--port=5050","--call", "flaskr:create_app"]
+CMD ["waitress-serve", "--port=5050","--call", "app:create_app"]
 
