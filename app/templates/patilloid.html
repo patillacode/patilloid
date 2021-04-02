@@ -19,104 +19,96 @@
 </head>
 
 <body>
-<p><a name="inicio"></a></p>
 
-<h1></h1>
+	<div id="container">
+		<div id="pantalla">
 
-	<div id="pantalla">
-
-		<!--<div id="ladrillos"></div>-->
-		<img id="ball" src="{{ url_for('static', filename='images/tierra_25x24.gif') }}" alt="planeta tierra"/>
-		<!-- Usamos un .gif en vez de un .png para la compatibilidad con IE -->
-		<img id="barraArka" src="{{ url_for('static', filename='images/barra_arka.gif') }}" alt="barra"/>
-		<img id="logo" src="{{ url_for('static', filename='images/logo_patilloid_400x122.png') }}" alt="logo PATILLOID"/>
-		<img id="gameOverImg" src="{{ url_for('static', filename='images/gameOver.png') }}" alt="logo GAME OVER"/>
-		<p id="vidas"><img src="{{ url_for('static', filename='images/earthheart2.gif') }}" alt="vidas" width="21px" height="21px"/> <span id="nVidas"></span></p>
+			<!--<div id="ladrillos"></div>-->
+			<img id="ball" src="{{ url_for('static', filename='images/tierra_25x24.gif') }}" alt="planeta tierra"/>
+			<!-- Usamos un .gif en vez de un .png para la compatibilidad con IE -->
+			<img id="barraArka" src="{{ url_for('static', filename='images/barra_arka.gif') }}" alt="barra"/>
+			<img id="logo" src="{{ url_for('static', filename='images/logo_patilloid_400x122.png') }}" alt="logo PATILLOID"/>
+			<img id="gameOverImg" src="{{ url_for('static', filename='images/gameOver.png') }}" alt="logo GAME OVER"/>
+			<p id="vidas"><img src="{{ url_for('static', filename='images/earthheart2.gif') }}" alt="vidas" width="21px" height="21px"/> <span id="nVidas"></span></p>
 
 
-	</div>
-
-	<div id="instrucciones">
-
-		<div id="aux_instrucciones">
-			<!--<p><strong>INSTRUCCIONES</strong></p>-->
-			<ul>
-				<li>Empezar el juego:</li>
-				<li class="elem">Pulsa el boton START o la tecla 'INTRO'</li>
-			</ul>
-
-			<ul>
-				<li>Parar el juego:</li>
-				<li class="elem">Pulsa el boton STOP o la tecla 's'</li>
-			</ul>
-
-			<ul>
-				<li>Pausar el juego:</li>
-				<li class="elem">Pulsa el boton PAUSE o la tecla 'ESPACIO'</li>
-			</ul>
-
-			<ul>
-				<li>Mover la barra:</li>
-				<li class="elem">IZQDA: Flecha Izquierda</li>
-				<li class="elem">DCHA: Flecha Derecha</li>
-				<li class="elem">Tambi&eacute;n con el rat&oacute;n</li>
-			</ul>
 		</div>
-	</div>
 
-	<div id="informacion">
+		<div id="instrucciones">
 
-		<div id="puntuacion">
-			<div id="score">
-				<strong>SCORE: <p id="num_puntos"></p></strong>
+			<div id="aux_instrucciones">
+				<!--<p><strong>INSTRUCCIONES</strong></p>-->
+				<ul>
+					<li>Empezar el juego:</li>
+					<li class="elem">Pulsa el boton START o la tecla 'INTRO'</li>
+				</ul>
+
+				<ul>
+					<li>Parar el juego:</li>
+					<li class="elem">Pulsa el boton STOP o la tecla 's'</li>
+				</ul>
+
+				<ul>
+					<li>Pausar el juego:</li>
+					<li class="elem">Pulsa el boton PAUSE o la tecla 'ESPACIO'</li>
+				</ul>
+
+				<ul>
+					<li>Mover la barra:</li>
+					<li class="elem">IZQDA: Flecha Izquierda</li>
+					<li class="elem">DCHA: Flecha Derecha</li>
+					<li class="elem">Tambi&eacute;n con el rat&oacute;n</li>
+				</ul>
 			</div>
 		</div>
 
-		<div id="nivel">
-			<div id="aux_nivel">
-				<strong>NIVEL: <p id="num_nivel"></p></strong>
+		<div id="informacion">
+
+			<div id="puntuacion">
+				<div id="score">
+					<strong>SCORE: <p id="num_puntos"></p></strong>
+				</div>
+			</div>
+
+			<div id="nivel">
+				<div id="aux_nivel">
+					<strong>NIVEL: <p id="num_nivel"></p></strong>
+				</div>
+			</div>
+
+			<div id="dificultad"><strong>ELIGE DIFICULTAD:</strong>
+
+				<ul>
+					<li id="dif_fac">
+						<label for="seleccion_dificultad">
+							<input id="seleccion_dificultad_facil" type="radio" name="dificultad" checked="checked"/>
+								<span>F&aacute;cil</span>
+						</label>
+					</li>
+					<li id="dif_med">
+						<label for="seleccion_dificultad_media">
+							<input id="seleccion_dificultad_media" type="radio" name="dificultad"/>
+							<span>Media</span>
+						</label>
+					</li>
+					<li id="dif_dif">
+						<label for="seleccion_dificultad_dificil">
+							<input id="seleccion_dificultad_dificil" type="radio" name="dificultad"/>
+							<span>Dif&iacute;cil</span>
+						</label>
+					</li>
+				</ul>
 			</div>
 		</div>
 
-		<div id="dificultad"><strong>ELIGE DIFICULTAD:</strong>
+		<div id="botones">
 
-			<ul>
-				<li id="dif_fac">
-					<label for="seleccion_dificultad">
-						<input id="seleccion_dificultad_facil" type="radio" name="dificultad" checked="checked"/>
-							<span>F&aacute;cil</span>
-					</label>
-				</li>
-				<li id="dif_med">
-					<label for="seleccion_dificultad_media">
-						<input id="seleccion_dificultad_media" type="radio" name="dificultad"/>
-						<span>Media</span>
-					</label>
-				</li>
-				<li id="dif_dif">
-					<label for="seleccion_dificultad_dificil">
-						<input id="seleccion_dificultad_dificil" type="radio" name="dificultad"/>
-						<span>Dif&iacute;cil</span>
-					</label>
-				</li>
-			</ul>
+			<input id="boton_instrucciones" type="button" name="instrucciones" title="Pincha para ver las instrucciones o pulsa 'i'"  value="Instrucciones" class="boton" onclick="ayuda(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
+			<input id="boton_restart" type="button" name="start" value="Start" class="boton" onclick="restart(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
+			<input id="boton_stop" type="button" name="stop" value="Stop" class="boton" onclick="stopGame(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
+			<input id="boton_pause" type="button" name="pause" value="Pause" class="boton" onclick="pause(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
 		</div>
+
 	</div>
-
-	<div id="botones">
-
-		<input id="boton_instrucciones" type="button" name="instrucciones" title="Pincha para ver las instrucciones o pulsa 'i'"  value="Instrucciones" class="boton" onclick="ayuda(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
-		<input id="boton_restart" type="button" name="start" value="Start" class="boton" onclick="restart(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
-		<input id="boton_stop" type="button" name="stop" value="Stop" class="boton" onclick="stopGame(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
-		<input id="boton_pause" type="button" name="pause" value="Pause" class="boton" onclick="pause(); this.blur()" onmouseover="pinta(this.id)" onmouseout="borra(this.id)"/>
-
-		<!--
-		<a id="boton_instrucciones" name="instrucciones" title="Pincha para ver las instrucciones o pulsa 'i'" class="boton" onclick="ayuda()">Instrucciones</a>
-		<a id="boton_restart" name="start" class="boton" onclick="restart()">Start</a>
-		<a id="boton_stop" name="stop" class="boton" onclick="stopGame()">Stop</a>
-		<a id="boton_pause" name="pause" class="boton" onclick="pause()">Pause</a>
-		-->
-	</div>
-
 </body>
 </html>
